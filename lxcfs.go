@@ -57,10 +57,10 @@ var volumeMountsTemplate = []corev1.VolumeMount{
 		Name:      "lxcfs-proc-uptime",
 		MountPath: "/proc/uptime",
 	},
-	{
-		Name:      "lxcfs-proc-loadavg",
-		MountPath: "/proc/loadavg",
-	},
+	// {
+	// 	Name:      "lxcfs-proc-loadavg",
+	// 	MountPath: "/proc/loadavg",
+	// },
 	{
 		Name:      "lxcfs-sys-devices-system-cpu-online",
 		MountPath: "/sys/devices/system/cpu/online",
@@ -115,14 +115,14 @@ var volumesTemplate = []corev1.Volume{
 			},
 		},
 	},
-	{
-		Name: "lxcfs-proc-loadavg",
-		VolumeSource: corev1.VolumeSource{
-			HostPath: &corev1.HostPathVolumeSource{
-				Path: "/var/lib/lxcfs/proc/loadavg",
-			},
-		},
-	},
+	// {
+	// 	Name: "lxcfs-proc-loadavg",
+	// 	VolumeSource: corev1.VolumeSource{
+	// 		HostPath: &corev1.HostPathVolumeSource{
+	// 			Path: "/var/lib/lxcfs/proc/loadavg",
+	// 		},
+	// 	},
+	// },
 	{
 		Name: "lxcfs-sys-devices-system-cpu-online",
 		VolumeSource: corev1.VolumeSource{
